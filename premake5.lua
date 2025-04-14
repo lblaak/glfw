@@ -1,7 +1,7 @@
 project "GLFW"
 	kind "StaticLib"
 	language "C"
-	staticruntime "off"
+	staticruntime "on"
 	warnings "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -28,7 +28,7 @@ project "GLFW"
 	}
 
 	filter "system:linux"
-		pic "On"
+		pic "on"
 
 		systemversion "latest"
 		
@@ -54,7 +54,7 @@ project "GLFW"
 		}
 
 	filter "system:macosx"
-		pic "On"
+		pic "on"
 
 		files
 		{
